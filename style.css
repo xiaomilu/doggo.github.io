@@ -1,0 +1,126 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 1rem 1.5rem;
+}
+
+.title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.75rem;
+}
+
+.header p {
+    font-weight: 400;
+    margin: 0.5rem 0rem;
+}
+
+.dropdown {
+    margin: 0.5rem 0rem;
+}
+
+.dropdown label {
+    margin-right: 0.8rem;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0rem;
+}
+
+.dog-img {
+    max-width: 80%;
+    display: none;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(-45deg);
+    }
+
+    25% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(45deg);
+    }
+
+    75% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(-45deg);
+    }
+}
+
+.spinner {
+	animation: spin 1s linear infinite;
+    text-align: center;
+    display: none;
+}
+
+.spinner-img {
+    margin-top: -3rem;
+    max-width: 60%;
+}
+
+.show {
+    display: block;
+}
+
+@media only screen and (min-width: 820px) {
+    .wrapper {
+        margin: 1.5rem 4rem;
+    }
+    
+    .title {
+        font-size: 2.75rem;
+    }
+    
+    .header p {
+        margin: 0.5rem 0rem;
+    }
+    
+    .dropdown {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1rem 0rem;
+    }
+    
+    .dropdown label {
+        margin-right: 0.8rem;
+    }
+    
+    .slideshow {
+        display: flex;
+        justify-content: center;
+        margin: 5rem 0rem;
+    }
+
+    .spinner-img {
+        margin-top: -4rem;
+        max-width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .spinner-img {
+        max-width: 30%;
+    }
+}
