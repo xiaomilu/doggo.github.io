@@ -52,6 +52,12 @@ imgContainer.addEventListener("click", function() {
     getDoggoImg(url);
 });
 
+imgContainer.addEventListener("touchstart", function() {
+    let url = `${DOG_CEO}/breed/${dropdownParent.value}/images/random`;
+
+    getDoggoImg(url);
+});
+
 imgContainer.addEventListener("load", function () {
     loadingSpinner.classList.remove("show");
     imgContainer.classList.add("show");
