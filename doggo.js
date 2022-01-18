@@ -33,9 +33,6 @@ const getDoggoImg = async (url) => {
         })
         .then(function(data) {
             imgContainer.src = data.message;
-            // Stop loading spinner
-            loadingSpinner.classList.remove("show");
-            imgContainer.classList.add("show");
         })
 }
 
@@ -47,4 +44,9 @@ dropdownParent.addEventListener("change", function(event) {
 
     getDoggoImg(selectedBreedImgUrl);
 } );
+
+imgContainer.addEventListener("load", function () {
+    loadingSpinner.classList.remove("show");
+    imgContainer.classList.add("show");
+})
 
