@@ -27,8 +27,13 @@ html {
     margin: 0.5rem 0rem;
 }
 
+.instructions {
+    font-size: 0.8rem;
+    margin-top: -1rem;
+}
+
 .dropdown {
-    margin: 0.5rem 0rem;
+    margin: 2rem 0rem;
 }
 
 .dropdown label {
@@ -44,6 +49,8 @@ html {
 .dog-img {
     max-width: 80%;
     display: none;
+    border-radius: 8px;
+    box-shadow: 5px 10px 18px #d5d5d5;
 }
 
 

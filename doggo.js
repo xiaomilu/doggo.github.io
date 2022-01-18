@@ -23,7 +23,7 @@ const populateDogBreedList = async () => {
     
 }
 
-const getDoggoImg = async (url) => {
+const getDoggoImg = (url) => {
     // Show loading spinner
     loadingSpinner.classList.add("show");
     imgContainer.classList.remove("show");
@@ -34,7 +34,7 @@ const getDoggoImg = async (url) => {
         .then(function(data) {
             imgContainer.src = data.message;
         })
-}
+};
 
 populateDogBreedList();
 
@@ -45,8 +45,17 @@ dropdownParent.addEventListener("change", function(event) {
     getDoggoImg(selectedBreedImgUrl);
 } );
 
+
+imgContainer.addEventListener("click", function() {
+    let url = `${DOG_CEO}/breed/${dropdownParent.value}/images/random`;
+
+    getDoggoImg(url);
+});
+
 imgContainer.addEventListener("load", function () {
     loadingSpinner.classList.remove("show");
     imgContainer.classList.add("show");
-})
+});
+
+
 
